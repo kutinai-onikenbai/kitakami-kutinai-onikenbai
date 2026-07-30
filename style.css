@@ -1,0 +1,1016 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.15em;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.nav a:hover {
+  opacity: 0.6;
+}
+
+.hero {
+  min-height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.68)),
+    url("2D5CCB28-874C-4AD0-B5A3-AFC5209F19B0.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-overlay {
+  padding: 40px 20px;
+}
+
+.hero-subtitle {
+  margin: 0 0 12px;
+  font-size: 18px;
+  letter-spacing: 0.35em;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: clamp(56px, 10vw, 120px);
+  letter-spacing: 0.12em;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.9);
+}
+
+.hero-message {
+  margin: 20px 0 32px;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+.hero-button,
+.contact-button {
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+}
+
+.hero-button:hover,
+.contact-button:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.section {
+  padding: 100px 24px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  margin: 0;
+  color: #b49554;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  text-align: center;
+}
+
+.section-title {
+  margin: 8px 0 45px;
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+.about {
+  background: #151515;
+}
+
+.about-text {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.schedule {
+  background: #0b0b0b;
+}
+
+#calendar {
+  padding: 24px;
+  background: #ffffff;
+  color: #111111;
+  border-radius: 8px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.gallery {
+  background: #151515;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-item {
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, rgba(100, 0, 0, 0.75), rgba(10, 10, 10, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 18px;
+}
+
+.contact {
+  text-align: center;
+  background: #090909;
+}
+
+.contact-text {
+  margin-bottom: 28px;
+  font-size: 17px;
+}
+
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: #000000;
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+.fc .fc-button-primary {
+  background: #641414;
+  border-color: #641414;
+}
+
+.fc .fc-button-primary:hover {
+  background: #411010;
+  border-color: #411010;
+}
+
+.fc .fc-daygrid-event {
+  background: #641414;
+  border-color: #641414;
+  padding: 2px 4px;
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    display: block;
+    text-align: center;
+  }
+
+  .nav {
+    margin-top: 10px;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 125px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-message {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 75px 16px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #calendar {
+    padding: 10px;
+  }
+}
+.calendar-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-wrap iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  border: 0;
+}
+/* =========================
+   写真ギャラリー
+========================= */
+
+.photo-gallery {
+  padding: 90px 6%;
+  background-color: #080808;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title p {
+  margin: 0 0 8px;
+  color: #c7a44a;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 5px;
+  font-family: serif;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #222;
+}
+
+.photo-large {
+  grid-row: 1 / 3;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.photo-large img {
+  object-position: center 42%;
+}
+
+.photo-item:hover img {
+  transform: scale(1.06);
+}
+
+.photo-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.05) 60%
+  );
+}
+
+.photo-text {
+  position: absolute;
+  left: 25px;
+  bottom: 22px;
+  z-index: 2;
+}
+
+.photo-text h3 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 3px;
+  font-family: serif;
+}
+
+.photo-text p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #eeeeee;
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 768px) {
+
+  .photo-gallery {
+    padding: 65px 18px;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+    letter-spacing: 3px;
+  }
+
+
+  .photo-grid {
+    display: block;
+  }
+
+  .photo-item {
+    height: 330px;
+    margin-bottom: 15px;
+  }
+
+  .photo-large {
+    height: 460px;
+  }
+
+  .photo-text {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .photo-text h3 {
+    font-size: 21px;
+  }
+}
+.photo-large img {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.photo-item:not(.photo-large) img {
+  object-fit: cover;
+  object-position: center 30%;
+}
+/* =========================
+   過去公演ページ
+========================= */
+
+.past-hero {
+  min-height: 430px;
+  padding: 150px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("top.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.past-hero .section-label {
+  margin: 0 0 14px;
+  color: #d1ad52;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.past-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 7vw, 72px);
+  letter-spacing: 8px;
+  font-family: serif;
+}
+
+.past-hero p {
+  margin: 0;
+  line-height: 1.9;
+  letter-spacing: 2px;
+}
+
+.past-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+}
+
+.archive-year {
+  margin-bottom: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.year-button {
+  width: 100%;
+  padding: 25px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  font-size: 31px;
+  font-family: serif;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.year-arrow {
+  color: #d1ad52;
+  font-size: 32px;
+}
+
+.year-content {
+  display: none;
+  padding-top: 20px;
+}
+
+.year-content.is-open {
+  display: block;
+}
+
+.performance-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 30px;
+  margin-bottom: 18px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #d1ad52;
+}
+
+.performance-date {
+  color: #d1ad52;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.performance-info h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-family: serif;
+}
+
+.performance-info p {
+  margin: 5px 0;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.performance-place {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.footer {
+  padding: 35px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #aaa;
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 768px) {
+
+  .past-hero {
+    min-height: 350px;
+    padding-top: 120px;
+  }
+
+  .past-hero h1 {
+    letter-spacing: 5px;
+  }
+
+  .past-main {
+    padding: 55px 15px 90px;
+  }
+
+  .year-button {
+    font-size: 25px;
+  }
+
+  .performance-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 23px 20px;
+  }
+
+  .performance-date {
+    font-size: 17px;
+  }
+
+  .performance-info h2 {
+    font-size: 22px;
+  }
+}
+/* =========================
+   公演詳細ページ
+========================= */
+
+.performance-hero {
+  min-height: 430px;
+  padding: 150px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.78)
+    ),
+    url("top.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.performance-hero .section-label {
+  margin: 0 0 14px;
+  color: #d1ad52;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.performance-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(34px, 6vw, 65px);
+  font-family: serif;
+  letter-spacing: 6px;
+}
+
+.performance-hero > p:last-child {
+  margin: 0;
+  color: #ddd;
+  letter-spacing: 3px;
+}
+
+.performance-page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 20px 120px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: #d1ad52;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.back-link:hover {
+  opacity: 0.65;
+}
+
+.performance-detail {
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 2px solid #d1ad52;
+}
+
+.performance-detail-heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.performance-detail-date {
+  margin: 0 0 13px;
+  color: #d1ad52;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.performance-detail-heading h2 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(28px, 5vw, 45px);
+  font-family: serif;
+  letter-spacing: 5px;
+}
+
+.performance-detail-place {
+  margin: 0;
+  color: #ccc;
+  letter-spacing: 2px;
+}
+
+.performance-main-photo {
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.performance-main-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.performance-description {
+  max-width: 780px;
+  margin: 55px auto;
+}
+
+.performance-description h3 {
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: 28px;
+  font-family: serif;
+  letter-spacing: 4px;
+}
+
+.performance-description p {
+  margin: 0 0 18px;
+  color: #ddd;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.performance-gallery {
+  margin-top: 70px;
+}
+
+.performance-section-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.performance-section-title p {
+  margin: 0 0 7px;
+  color: #d1ad52;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.performance-section-title h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 31px;
+  font-family: serif;
+  letter-spacing: 5px;
+}
+
+.performance-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.performance-photo-grid a {
+  height: 320px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.performance-photo-grid img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.performance-photo-grid a:hover img {
+  transform: scale(1.06);
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 768px) {
+
+  .performance-hero {
+    min-height: 350px;
+    padding-top: 120px;
+  }
+
+  .performance-page {
+    padding: 45px 15px 85px;
+  }
+
+  .performance-detail {
+    padding: 28px 16px;
+  }
+
+  .performance-main-photo {
+  height: auto;
+  overflow: visible;
+}
+
+.performance-main-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+  .performance-description {
+    margin: 40px auto;
+  }
+
+  .performance-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-photo-grid a {
+    height: 420px;
+  }
+}
+/* 過去公演カードのリンク */
+
+.performance-card-link {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.performance-card-link:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.performance-more {
+  display: inline-block;
+  margin-top: 15px;
+  color: #d1ad52;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.performance-youtube {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+.youtube-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #111;
+}
+
+.youtube-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.programs-section {
+  padding: 70px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.programs-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.programs-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.program-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.program-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 45px;
+  background: #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.program-card img {
+  width: 45%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.program-text {
+  flex: 1;
+}
+
+.program-text h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.program-text p {
+  line-height: 1.9;
+}
+
+@media screen and (max-width: 700px) {
+  .program-card {
+    display: block;
+  }
+
+  .program-card img {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 20px;
+  }
+}
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.sns-icons a {
+    transition: 0.3s;
+}
+
+.sns-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.sns-icons img {
+    width: 70px;
+    height: 70px;
+}
+
+.sns-icons{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:30px;
+}
+
+.sns-icons a{
+    font-size:60px;
+    color:#d4af37;   /* 金色 */
+    transition:0.3s;
+}
+
+.sns-icons a:hover{
+    color:#ffffff;
+    transform:translateY(-5px) scale(1.1);
+}
+
+/* ==========================
+   スマホ対応
+========================== */
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+.hero{
+    background-size: contain;
+    background-color: #000;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+.photo-item {
+  height: auto;
+}
+
+.photo-large {
+  height: auto;
+}
+
+.photo-item img,
+.photo-large img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+}
