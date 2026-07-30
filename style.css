@@ -988,9 +988,11 @@ a {
     overflow-x: auto;
   }
 
-.hero{
+.hero {
     background-size: contain;
     background-color: #000;
+    padding-top: 180px;
+    padding-bottom: 120px;
 }
 
 p {
@@ -1011,6 +1013,11 @@ p {
   height: auto;
   object-fit: contain;
   object-position: center;
+}
+
+.hero-button {
+  position: relative;
+  top: 35px;
 }
 
 }
