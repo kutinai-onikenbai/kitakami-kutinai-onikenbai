@@ -1036,3 +1036,219 @@ p {
   border: 0;
   border-radius: 12px;
 }
+
+.no-performance {
+  padding: 25px 20px;
+  margin-top: 15px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #777;
+}
+
+.no-performance p {
+  margin: 0;
+  font-size: 15px;
+}
+/* =========================
+   次回公演
+========================= */
+
+.next-performance {
+  padding: 70px 20px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+}
+
+.next-performance .section-label {
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.next-performance h2 {
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+
+.next-performance-card {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 35px 20px;
+  background: #181818;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+}
+
+.next-performance-card h3 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.next-performance-place {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+
+  .next-performance {
+    padding: 45px 15px;
+  }
+
+  .next-performance h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+  }
+
+  .next-performance-card {
+    padding: 28px 15px;
+  }
+
+  .next-performance-card h3 {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+}
+/* =========================
+   トップ画像 自動スライド
+========================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+/* トップ文字を黒にする */
+.hero-overlay {
+  color: #000;
+}
+
+.hero-subtitle,
+.hero-overlay h2,
+.hero-message {
+  color: #000;
+}
+/* トップ文字を見やすく */
+.hero-subtitle,
+.hero-overlay h2,
+.hero-message {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+/* トップ写真を少し暗くして文字を見やすく */
+.hero-slideshow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 文字を写真より前に表示 */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* 白文字＋影 */
+.hero-subtitle,
+.hero-overlay h2,
+.hero-message {
+  color: #fff;
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(0, 0, 0, 0.6);
+}
+/* トップの「公演情報を見る」を白文字に */
+.hero-button {
+  color: #fff !important;
+  border-color: #fff;
+}
+/* =========================
+   NEWS
+========================= */
+
+.news-section {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.news-section .section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.news-list {
+  margin-top: 35px;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.news-item {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.news-date {
+  min-width: 110px;
+  color: #c8a96b;
+  font-weight: bold;
+}
+
+.news-text {
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+
+  .news-section {
+    padding: 55px 20px;
+  }
+
+  .news-item {
+    display: block;
+  }
+
+  .news-date {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+}

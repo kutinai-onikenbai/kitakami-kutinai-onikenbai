@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -49,17 +49,58 @@
   <main>
 
     <section id="top" class="hero">
-      <div class="hero-overlay">
-        <p class="hero-subtitle">岩手県北上市</p>
-        <h2>口内鬼剣舞</h2>
-        <p class="hero-message">受け継がれる舞を、未来へ。</p>
 
-        <a href="#schedule" class="hero-button">
-          公演情報を見る
-        </a>
-      </div>
-    </section>
+  <!-- 自動スライド写真 -->
+  <div class="hero-slideshow">
 
+    <div class="hero-slide active"
+         style="background-image: url('FB7F1A1E-AD9F-4D28-A74E-53379B67CB55.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image: url('D152AF21-3BC1-4781-841F-E3D758F1CC83.jpg');">
+    </div>
+
+    <div class="hero-slide"
+         style="background-image: url('B2A33F36-674E-4E20-99EB-9E728528FC07.jpg');">
+    </div>
+
+  </div>
+
+  <!-- 文字 -->
+  <div class="hero-overlay">
+
+    <p class="hero-subtitle">岩手県北上市</p>
+
+    <h2>口内鬼剣舞</h2>
+
+    <p class="hero-message">受け継がれる舞を、未来へ。</p>
+
+    <a href="#schedule" class="hero-button">
+      公演情報を見る
+    </a>
+
+  </div>
+
+</section>
+    <!-- 次回公演 -->
+<section class="next-performance">
+
+  <p class="section-label">NEXT PERFORMANCE</p>
+
+  <h2>次回公演</h2>
+
+  <div class="next-performance-card">
+
+    <h3>現在予定されている公演はありません</h3>
+
+    <p class="next-performance-place">
+      次回の公演が決まり次第、お知らせいたします。
+    </p>
+
+  </div>
+
+</section>
     <section id="about" class="section about">
       <div class="section-inner">
         <p class="section-label">ABOUT</p>
@@ -73,6 +114,34 @@
         </p>
       </div>
     </section>
+    <!-- NEWS -->
+<section class="news-section" id="news">
+  <div class="section-inner">
+
+    <p class="section-label">NEWS</p>
+    <h2 class="section-title">お知らせ</h2>
+
+    <div class="news-list">
+
+      <div class="news-item">
+        <span class="news-date">2026.08.14</span>
+        <span class="news-text">過去公演情報を更新しました</span>
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">2026.08.09</span>
+        <span class="news-text">北上・みちのく芸能まつりに出演しました</span>
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">2026.08.05</span>
+        <span class="news-text">ホームページを更新しました</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <section id="schedule" class="section schedule">
       <div class="section-inner">
@@ -393,6 +462,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add('active');
+  }, 5000);
+</script>
+
+<script>
+  const newsItems = document.querySelectorAll('.news-item');
+
+  newsItems.forEach((item, index) => {
+    if (index >= 3) {
+      item.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
