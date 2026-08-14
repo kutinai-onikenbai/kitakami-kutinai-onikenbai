@@ -1546,3 +1546,34 @@ p {
   }
 
 }
+/* スマホ：トップの文字をギュッとまとめる */
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .hero-content p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+
+}
+/* スマホ：トップの3つの文字を近づける */
+@media (max-width: 768px) {
+
+  .hero-overlay .hero-subtitle {
+    margin: 0 0 6px;
+  }
+
+  .hero-overlay h2 {
+    margin: 0 0 8px;
+  }
+
+  .hero-overlay .hero-message {
+    margin: 0 0 18px;
+  }
+
+}
