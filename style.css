@@ -1334,3 +1334,142 @@ p {
   }
 
 }
+/* ===== スマホ表示 最終調整 ===== */
+@media (max-width: 768px) {
+
+  /* 上の黒いメニューを小さく */
+  .header {
+    padding: 12px 10px !important;
+  }
+
+  .header-inner {
+    gap: 10px !important;
+  }
+
+  .logo {
+    font-size: 28px !important;
+    margin: 0 0 10px !important;
+  }
+
+  /* メニュー */
+  .nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px 20px !important;
+  }
+
+  .nav a {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    padding: 3px 0 !important;
+    white-space: nowrap;
+  }
+
+  /* トップ写真 */
+  .hero {
+    height: 620px !important;
+    min-height: 0 !important;
+  }
+
+  .hero-slide {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 公演情報を中央に */
+  #schedule {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #schedule .section-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #schedule .section-label,
+  #schedule .section-title,
+  #schedule h3 {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* カレンダーも中央 */
+  .calendar-wrap {
+    width: 100% !important;
+    margin: 20px auto 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    overflow: hidden;
+  }
+
+  .calendar-wrap iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 500px !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .hero-overlay {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero-button {
+    display: inline-block !important;
+    margin: 30px auto 0 !important;
+    padding: 14px 28px !important;
+    text-align: center !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .hero-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-button {
+    position: static !important;
+    transform: none !important;
+
+    display: block !important;
+    width: fit-content !important;
+
+    margin: 35px auto 0 !important;
+    padding: 14px 35px !important;
+
+    text-align: center !important;
+  }
+
+}
