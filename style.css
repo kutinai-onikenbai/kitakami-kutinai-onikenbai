@@ -1561,19 +1561,51 @@ p {
   }
 
 }
-/* スマホ：トップの3つの文字を近づける */
+/* ===== スマホ：トップ文字位置を固定 ===== */
 @media (max-width: 768px) {
 
+  .hero-overlay {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  /* 岩手県北上市 */
   .hero-overlay .hero-subtitle {
-    margin: 0 0 6px;
+    width: 100%;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+    text-align: center;
   }
 
+  /* 口内鬼剣舞 */
   .hero-overlay h2 {
-    margin: 0 0 8px;
+    width: 100%;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+    text-align: center;
   }
 
+  /* 受け継がれる舞を、未来へ。 */
   .hero-overlay .hero-message {
-    margin: 0 0 18px;
+    width: 100%;
+    margin: 0 0 20px !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  /* 公演情報を見る */
+  .hero-overlay .hero-button {
+    margin: 0 auto !important;
+    align-self: center;
   }
 
 }
