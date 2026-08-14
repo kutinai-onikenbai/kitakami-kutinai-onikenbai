@@ -1473,3 +1473,51 @@ p {
   }
 
 }
+/* ===== スマホ：トップ画面を完全中央揃え ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+
+    position: relative;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .hero-content h1,
+  .hero-content p {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    max-width: 320px;
+    margin: 30px auto 0;
+
+    left: 0;
+    right: 0;
+    transform: none;
+    box-sizing: border-box;
+  }
+}
