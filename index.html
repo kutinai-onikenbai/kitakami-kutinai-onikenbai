@@ -442,56 +442,34 @@
   <p class="section-label">SHARE</p>
   <h2 class="section-title">このページを共有</h2>
 
-  <div class="share-buttons">
-
-    <a
-      href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
-      target="_blank"
-      class="share-btn share-line"
-    >
-      LINE
-    </a>
-
-    <a
-      href="https://twitter.com/intent/tweet?text=口内鬼剣舞&url=https%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
-      target="_blank"
-      class="share-btn share-x"
-    >
-      X
-    </a>
-
-    <button
-      type="button"
-      class="share-btn share-instagram"
-      onclick="copySiteUrl()"
-    >
-      Instagram
-    </button>
-
-    <a
-      href="mailto:?subject=口内鬼剣舞&body=口内鬼剣舞のホームページはこちら%0D%0Ahttps%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
-      class="share-btn share-mail"
-    >
-      メール
-    </a>
-
-  </div>
-
-  <p id="copy-message"></p>
+  <button
+    type="button"
+    class="share-main-button"
+    onclick="shareSite()"
+  >
+    共有する
+  </button>
 
 </section>
 
 <script>
-function copySiteUrl() {
-  const url = "https://kutinai-onikenbai.github.io/kitakami-kutinai-onikenbai/";
+function shareSite() {
 
-  navigator.clipboard.writeText(url);
+  const shareData = {
+    title: "口内鬼剣舞保存会",
+    text: "口内鬼剣舞保存会のホームページです。",
+    url: "https://kutinai-onikenbai.github.io/kitakami-kutinai-onikenbai/"
+  };
 
-  document.getElementById("copy-message").textContent =
-    "URLをコピーしました！Instagramに貼り付けてください。";
+  if (navigator.share) {
+    navigator.share(shareData);
+  } else {
+    navigator.clipboard.writeText(shareData.url);
+    alert("URLをコピーしました！");
+  }
+
 }
 </script>
-
   
 
 <section id="sns" class="section">
