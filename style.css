@@ -1765,3 +1765,61 @@ p {
 html {
   scroll-behavior: smooth;
 }
+.share-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.share-section h2 {
+  margin-bottom: 5px;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.share-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.share-line {
+  background: #06c755;
+}
+
+.share-x {
+  background: #000;
+}
+
+.share-instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+.share-mail {
+  background: #555;
+}
+
+.share-btn:hover {
+  opacity: 0.8;
+}
+
+#copy-message {
+  margin-top: 15px;
+  font-size: 14px;
+}

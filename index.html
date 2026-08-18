@@ -437,6 +437,60 @@
     </a>
   </div>
 </section>
+<section class="share-section">
+
+  <p class="section-label">SHARE</p>
+  <h2 class="section-title">このページを共有</h2>
+
+  <div class="share-buttons">
+
+    <a
+      href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
+      target="_blank"
+      class="share-btn share-line"
+    >
+      LINE
+    </a>
+
+    <a
+      href="https://twitter.com/intent/tweet?text=口内鬼剣舞&url=https%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
+      target="_blank"
+      class="share-btn share-x"
+    >
+      X
+    </a>
+
+    <button
+      type="button"
+      class="share-btn share-instagram"
+      onclick="copySiteUrl()"
+    >
+      Instagram
+    </button>
+
+    <a
+      href="mailto:?subject=口内鬼剣舞&body=口内鬼剣舞のホームページはこちら%0D%0Ahttps%3A%2F%2Fkutinai-onikenbai.github.io%2Fkitakami-kutinai-onikenbai%2F"
+      class="share-btn share-mail"
+    >
+      メール
+    </a>
+
+  </div>
+
+  <p id="copy-message"></p>
+
+</section>
+
+<script>
+function copySiteUrl() {
+  const url = "https://kutinai-onikenbai.github.io/kitakami-kutinai-onikenbai/";
+
+  navigator.clipboard.writeText(url);
+
+  document.getElementById("copy-message").textContent =
+    "URLをコピーしました！Instagramに貼り付けてください。";
+}
+</script>
 
   
 
